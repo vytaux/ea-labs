@@ -43,6 +43,7 @@ public class BankService {
 		} catch (Throwable e) {
 			emailSender.sendEmail(emailAddress, "We could not create your account " + AccountNumber);
 			createTraceRecord("Could not create customer " + customerName + " with account " + AccountNumber);
+			throw e;
 		}
 	}
 
