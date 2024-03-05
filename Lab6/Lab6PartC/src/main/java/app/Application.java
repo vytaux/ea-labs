@@ -1,7 +1,6 @@
 package app;
 
 import domain.Book;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -10,7 +9,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.util.StopWatch;
 import repository.BookRepository;
 
-import java.util.List;
 import java.util.Random;
 
 @SpringBootApplication
@@ -54,7 +52,7 @@ public class Application implements CommandLineRunner{
 //			bookRepository.save(book);
 //		}
 
-		bookRepository.updateLocationCodeWithPrefix("BB");
+		bookRepository.updateLocationCode();
 
 		sw.stop();
 		long totaltime=sw.getTotalTimeMillis();

@@ -10,8 +10,8 @@ import org.springframework.transaction.annotation.Transactional;
 public interface BookRepository extends JpaRepository<Book, Long> {
     @Modifying
     @Transactional
-    @Query("update Book b set b.locationCode = CONCAT(:prefix, b.locationCode)")
-    void updateLocationCodeWithPrefix(@Param("prefix") String prefix);
+    @Query("update Book b set b.locationCode = CONCAT('BB', b.locationCode)")
+    void updateLocationCode();
 
     @Modifying
     @Transactional
