@@ -1,0 +1,10 @@
+LabA 
+a not retrieved automatically, is lazily loaded, needs @Transaction to fetch Employee, or EAGER
+b book_publisher table doesn't seem to be getting populated with @JoinTable defaults, but 
+does with the additional configuration. Although it works with both configs???
+
+
+LabB
+had to use int ids as asomething is wrong with string keys (hypersql cant generate?)
+Retrieving order from the database needs to use @Transactional, otherwise connection gets
+closed and lazy loaded relations (order line) can't be retrieved anymore. 
