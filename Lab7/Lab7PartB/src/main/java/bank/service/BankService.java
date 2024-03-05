@@ -33,6 +33,7 @@ public class BankService {
 		// Doesn't seem right to catch Throwable here, but it satisfies the requirement
 		} catch (Throwable e) {
 			emailSender.sendEmail(emailAddress, "We could not create your account " + AccountNumber);
+			throw e;
 		}
 	}
 }

@@ -19,8 +19,12 @@ public class Application implements CommandLineRunner{
 
 	@Override
 	public void run(String... args) throws Exception {
-		bankService.createCustomerAndAccount(12, "Jack Bauer", "jbauer@yahoo.com","1223");
-		bankService.createCustomerAndAccount(14, "Frank Brown", "frankbrown@gmail.com","1248");
+		try {
+			bankService.createCustomerAndAccount(12, "Jack Bauer", "jbauer@yahoo.com","1223");
+			bankService.createCustomerAndAccount(14, "Frank Brown", "frankbrown@gmail.com","1248");
+		} catch (Throwable e) {
+			System.out.println("Exception: " + e.getMessage());
+		}
 	}
 
 }
