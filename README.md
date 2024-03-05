@@ -1,1 +1,1 @@
-# CS544 Enterprise Architecture Assignment Solutions
+# CS544 Enterprise Architecture Assignments
