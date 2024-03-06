@@ -39,7 +39,6 @@ public class BankService {
 			emailSender.sendEmail(emailAddress, "Welcome "+customerName);
 
 			createTraceRecord("Customer " + customerName + " created with account " + AccountNumber);
-			// Doesn't seem right to catch Throwable here, but it satisfies the requirement
 		} catch (Throwable e) {
 			emailSender.sendEmail(emailAddress, "We could not create your account " + AccountNumber);
 			createTraceRecord("Could not create customer " + customerName + " with account " + AccountNumber);
@@ -51,6 +50,6 @@ public class BankService {
 		TraceRecord traceRecord = new TraceRecord();
 		traceRecord.setResult(result);
 		traceRecord.setCreatedAt(LocalDate.now());
-		traceRecordRepository.save(traceRecord);
+		traceRecordRepository.saveTraceRecord(traceRecord);
 	}
 }
