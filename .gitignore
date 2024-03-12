@@ -1,5 +1,6 @@
 hsqldb
 mongodb
+activemq
 target/
 .idea/
 *.zip
