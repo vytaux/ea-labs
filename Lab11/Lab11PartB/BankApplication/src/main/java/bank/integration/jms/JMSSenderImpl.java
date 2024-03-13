@@ -12,7 +12,7 @@ public class JMSSenderImpl implements JMSSender{
 		this.jmsTemplate = jmsTemplate;
 	}
 
-	public void sendJMSMessage (String text){
-		jmsTemplate.send("testQueue", session -> session.createTextMessage(text));
+	public void sendJMSMessage (String message){
+		jmsTemplate.send("testQueue", session -> session.createTextMessage(message));
 	}
 }

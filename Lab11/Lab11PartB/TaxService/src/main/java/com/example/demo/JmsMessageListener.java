@@ -10,8 +10,8 @@ import java.io.IOException;
 public class JmsMessageListener {
 
     @JmsListener(destination = "testQueue")
-    public void receiveMessage(final String operationAsString) {
-        System.out.println("JMS receiver received message:" + operationAsString);
+    public void receiveMessage(final String message) {
+        System.out.println("JMS receiver received message:" + message);
      }
 }
 
