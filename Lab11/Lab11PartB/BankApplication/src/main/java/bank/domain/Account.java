@@ -54,7 +54,7 @@ public class Account {
 		return balance;
 	}
 
-	public void deposit(double amount){
+	public void deposit(Double amount){
 		AccountEntry entry = new AccountEntry(new Date(), amount, "deposit", "", "");
 		entryList.add(entry);
 	}
