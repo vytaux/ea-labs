@@ -8,6 +8,8 @@ management:
       show-values: ALWAYS
     shutdown:
       enabled: true
+    health:
+      show-details: always
 
 spring:
   # hypersql

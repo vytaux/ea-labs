@@ -6,3 +6,4 @@ target/
 *.zip
 *.iml
 logs/
+*.docx
