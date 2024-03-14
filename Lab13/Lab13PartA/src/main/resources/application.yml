@@ -1,0 +1,32 @@
+spring:
+  # hypersql
+  datasource:
+    url: jdbc:hsqldb:hsql://localhost:9003/trainingdb
+    username: SA
+    password: ''
+    driver-class-name: org.hsqldb.jdbcDriver
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.HSQLDialect
+  # activemq
+  activemq:
+    broker-url: tcp://localhost:61616
+    user: admin
+    password: admin
+  # kafka
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: gid
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: kafka
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
