@@ -1,0 +1,12 @@
+myapp:
+    name: demo
+    version: 0.0.1
+    server:
+        url: http://localhost:8080
+        name: MyApp
+    user:
+        firstname: John
+        lastname: Doe
+        username: johndoekk
+        password: 123456ok
+    countries: US,UK,DE,FR
